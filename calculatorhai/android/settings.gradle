@@ -1,0 +1,3 @@
+rootProject.name = 'calculatorhai'
+
+include ':app'
