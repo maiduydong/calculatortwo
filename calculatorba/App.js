@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -90,7 +88,7 @@ handleInput =(input) =>{
       })
     }else {
       this.setState({
-        secondValue : input
+        secondValue : secondValue +input
       })
     }
     break;
@@ -112,9 +110,9 @@ handleInput =(input) =>{
     case 'DEL':
       let string = displayValue.toString();
       let deletedString = string.substr(0,string.length -1);
-      let length = deletedString.length;
+      let length = string.length;
       this.setState({
-        displayValue: deletedString.length ==1 ? '0' : deletedString
+        displayValue: length ==1 ? '0' : deletedString
       })
       break;
   }
