@@ -22,7 +22,7 @@ export default class App extends Component {
   constructor(){
     super()
     this.initialState = {
-      displayValue: 0,
+      displayValue: '0',
       operator: null,
       firstValue:'',
       secondValue:'',
@@ -57,7 +57,7 @@ handleInput =(input) =>{
     case '8':
     case '9':
       this.setState({
-      displayValue: (displayValue === 0) ? input : displayValue + input
+      displayValue: (displayValue === '0') ? input : displayValue + input
     })
     if (!nextValue){
       this.setState({
@@ -99,7 +99,7 @@ handleInput =(input) =>{
     let result = eval(firstValue + formatOperator + secondValue)
     this.setState({
       displayValue: result,
-      firstValue:'',
+      firstValue:result,
       secondValue:'',
       operator: null,
       nextValue: false
